@@ -1,0 +1,31 @@
+{
+    "games": [
+      {
+        "id": 1,
+        "name": "FiFa 2021",
+        "company": "XBox",
+        "fImage": "not available",
+        "file": "not available",
+        "tags": "sports",
+        "featured": "not available"
+      },
+      {
+        "id": 1,
+        "name": "Pes2021",
+        "company": "Xbox 360",
+        "fImage": "not available",
+        "file": "not available",
+        "tags": "kids",
+        "featured": "not available"
+      }
+    ],
+    "tags": [
+        {
+            "id":1,
+            "name": "sports"
+        },
+        {
+            "id": 2,
+            "name": "arcade"
+        }
+    ]
