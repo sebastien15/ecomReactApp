@@ -2,7 +2,7 @@ import '../../../../App.css';
 
 function Banner() {
     return (
-        <div className="flex px-4 h-96">
+        <div className="flex px-4">
             <div className="w-4/12 navBg px-3 pt-4">
                 <div className="search ">
                     search space

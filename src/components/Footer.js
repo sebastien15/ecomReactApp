@@ -1,7 +1,30 @@
 import "../App.css";
 import {NavLink, BrowserRouter as Router} from "react-router-dom"
+import { useState } from 'react'
 
 function Footer() {
+    const [ email, setEmail ] = useState('')
+    const onsubmit = (e) =>{
+        e.preventDefault();
+        if(!email) {
+            alert ('please add your email')
+            return
+        }
+        addEmail({email})
+        setEmail('')
+    }
+    const addEmail = async (product) =>{
+        const res = await fetch('http://localhost:5000/email',{
+            method: 'POST',
+            headers: {
+                'content-type': 'application/json'
+            },
+            body: JSON.stringify(product)
+        })
+        const data = await res.json()
+        setEmail ([...email, data])
+    }
+
     return(
         <div className="navBg p-8 flex text-gray-200">
             <div className="w-5/12 px-3">
@@ -38,9 +61,13 @@ function Footer() {
             </div>
             <div className="w-4/12 px-3">
                 <p className="mb-2">Subscribe To Our NewsLatter</p>
-                <form className="flex flex-col">
+                <form className="flex flex-col" onSubmit={onsubmit}>
                     <label className="mb-1">Email</label>
-                    <input className="mb-1 border border-gray-500 p-2 py-1 bg-transparent text-gray-200 w-5/12"/>
+                    <input className="mb-1 border border-gray-500 p-2 py-1 bg-transparent text-gray-200 w-5/12"
+                        name="email"
+                        value={email}
+                        onChange={(e)=> setEmail(e.target.value)}
+                        />
                     <button type="submit" className="bg-gray-800 hover:bg-gray-900 p-2 w-5/12">Subscribe</button>
                 </form>
             </div>

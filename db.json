@@ -1,31 +1,81 @@
 {
-    "games": [
-      {
-        "id": 1,
-        "name": "FiFa 2021",
-        "company": "XBox",
-        "fImage": "not available",
-        "file": "not available",
-        "tags": "sports",
-        "featured": "not available"
-      },
-      {
-        "id": 1,
-        "name": "Pes2021",
-        "company": "Xbox 360",
-        "fImage": "not available",
-        "file": "not available",
-        "tags": "kids",
-        "featured": "not available"
-      }
-    ],
-    "tags": [
-        {
-            "id":1,
-            "name": "sports"
-        },
-        {
-            "id": 2,
-            "name": "arcade"
-        }
-    ]
+  "games": [
+    {
+      "id": 1,
+      "name": "FiFa 2021",
+      "company": "XBox",
+      "fImage": "gta.png",
+      "file": "not available",
+      "tags": "sports",
+      "featured": "not available"
+    },
+    {
+      "id": 2,
+      "name": "Pes2021",
+      "company": "Xbox 360",
+      "fImage": "watchdogs.png",
+      "file": "not available",
+      "tags": "kids",
+      "featured": "not available"
+    },
+    {
+      "id": 3,
+      "name": "Pes2021",
+      "company": "Xbox 360",
+      "fImage": "mafia3.png",
+      "file": "not available",
+      "tags": "kids",
+      "featured": "not available"
+    },
+    {
+      "name": "Ndagijimana ",
+      "company": "sebastien",
+      "fImage": "gta.png",
+      "file": "no file given",
+      "tags": "sports and kids",
+      "description": "here is the description",
+      "featured": true,
+      "id": 4
+    },
+    {
+      "name": "Ndagijimana ",
+      "company": "sebastien",
+      "fImage": "fImage3",
+      "file": "gta.png",
+      "tags": "sports and kids",
+      "description": "here is another descroiptn",
+      "featured": true,
+      "id": 5
+    },
+    {
+      "name": "Ndagijimana ",
+      "company": "sebastien",
+      "fImage": "fImage3",
+      "file": "no file given",
+      "tags": "sports and kids",
+      "description": "fsafasdlfjsadlf",
+      "featured": true,
+      "id": 6
+    }
+  ],
+  "tags": [
+    {
+      "id": 1,
+      "name": "sports"
+    },
+    {
+      "id": 2,
+      "name": "arcade"
+    }
+  ],
+  "email": [
+    {
+      "id": 1,
+      "email": "abc@gmail.com"
+    },
+    {
+      "email": "admin@example.com",
+      "id": 2
+    }
+  ]
+}
