@@ -1,13 +1,6 @@
 import '../../../../App.css';
 
 function Product ({ onAddCartItem, products }) {
-   
-
-    // const addToCart = (id)=>{
-    //     console.log(`the id is ${id}`)
-    //     addCartItem(id)
-    //     return
-    // }
     const buyNow = (e)=>{
         alert('buying now')
         return
@@ -22,7 +15,7 @@ function Product ({ onAddCartItem, products }) {
     }
     return(
         <div className="flex flex-wrap w-9/12 m-auto mb-10">
-            <div className=" mb-4 w-12/12 sm:w-6/12 md:w-3/12 flex flex-col content-center text-center pl-1">
+            <div className="w-full mb-4 sm:w-6/12 md:w-3/12 flex flex-col content-center text-center pl-1">
                 <div className="navBg py-4">
                     <img src="/icon.png" alt="" className="m-auto w-20 h-28 mb-7"/>
                     <h5>Top Games</h5>
