@@ -1,5 +1,5 @@
 import '../App.css';
-import { Link, BrowserRouter  as Router } from "react-router-dom";
+import { Link} from "react-router-dom";
 
 function Navigation({cart}) {
     const openNav = ()=>{
@@ -18,7 +18,6 @@ function Navigation({cart}) {
     }
     return (
         <div className="flex flex-col sm:flex-row justify-between p-4 navBg">
-            <Router>
                 <div className="flex flex-col sm:flex-row sm:w-8/12">
                     <div className="flex justify-between sm:w-2/12 w-full">
                         <div className=" text-yellow-600 font-bold text-2xl">TryBe</div>   
@@ -49,7 +48,6 @@ function Navigation({cart}) {
                         <li className="cursor-pointer orangeColor border border-yellow-700 px-1 py-2 rounded-sm"><Link to="/account">My account</Link></li>
                     </ul>
                 </div>
-            </Router>
         </div>
     );
 }

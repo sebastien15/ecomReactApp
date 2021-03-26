@@ -16,12 +16,10 @@ function App (){
     const [cartItems, setCartItems ] = useState([])
     const addCartItem = (cartItem)=> {
         setCartItems([...cartItems, cartItem])
-        console.log(cartItems)
     }
     useEffect(() => {
         const getProducts = async ()=>{
             const productsFromServer = await fetchProducts()
-
             setProducts(productsFromServer)
         }
         getProducts()
@@ -31,30 +29,36 @@ function App (){
         const data = await res.json()
         return data
     }
-
+    const deleteProduct = async (id)=>{
+        await fetch(`http://localhost:5000/games/${id}`,{
+            method: 'DELETE',
+        })
+        const products = await fetchProducts()
+        setProducts(products)
+    }
     return (
         <div>
             <Router>
                 <Navigation cart={cartItems.length}/>
                 <Switch>
-                <Route exact path="/" component="Home">
-                    <Home onAddCartItem={addCartItem} products={products}/>
-                </Route>
-                <Route exact path="/cart" component="Cart">
-                    <Cart />
-                </Route>
-                <Route exact path="/account" component="Account">
-                    <Account />
-                </Route>
-                <Route exact path="/AddProduct" component="AddProduct">
-                    <AddProduct />
-                </Route>
-                <Route exact path="/SingleProduct" component="SingleProduct">
-                    <SingleProduct />
-                </Route>
-                <Route exact path="/dashboard" component="Dashboard">
-                    <Dashboard products={products}/>
-                </Route>
+                    <Route exact path="/" component="Home">
+                        <Home onAddCartItem={addCartItem} products={products}/>
+                    </Route>
+                    <Route path="/cart" component="Cart">
+                        <Cart />
+                    </Route>
+                    <Route path="/account" component="Account">
+                        <Account />
+                    </Route>
+                    <Route path="/AddProduct" component="AddProduct">
+                        <AddProduct />
+                    </Route>
+                    <Route path="/SingleProduct" component="SingleProduct">
+                        <SingleProduct />
+                    </Route>
+                    <Route path="/dashboard" component="Dashboard">
+                        <Dashboard products={products} deleteProduct={deleteProduct}/>
+                    </Route>
                 </Switch>
                 <Footer />
             </Router>

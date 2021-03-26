@@ -1,7 +1,8 @@
 import "../../App.css";
-import { useState } from 'react'
+import { Link } from "react-router-dom";
+// import { useState, useEffect } from 'react'
 
-function Dashboard({products}) {
+function Dashboard({products, deleteProduct}) {
     return (
         <div className="flex">
             <div className="navBg w-9/12 sm:w-3/12 h-screen pt-8 pl-4">
@@ -46,9 +47,9 @@ function Dashboard({products}) {
                                     <td>yes</td>
                                     <td>sports</td>
                                     <td className="flex">
-                                        <a href="edit" className="border border-yellow-600 text-yellow-600 bg-transparent mr-2 hover:text-white hover:bg-yellow-600 cursor-pointer p-1 px-3">Edit</a>
-                                        <button className="border border-red-600 text-red-600 bg-transparent mr-2 hover:text-white hover:bg-red-600 cursor-pointer p-1 px-3">Delete</button>
-                                    </td>
+                                        <Link to="/edit" className="border border-yellow-600 text-yellow-600 bg-transparent mr-2 hover:text-white hover:bg-yellow-600 cursor-pointer p-1 px-3">Edit</Link>
+                                        <button onClick={()=>{deleteProduct(product.id)}} className="border border-red-600 text-red-600 bg-transparent mr-2 hover:text-white hover:bg-red-600 cursor-pointer p-1 px-3">Delete</button>
+                                        </td>
                                 </tr>
                             )) : "No products available"
                         }

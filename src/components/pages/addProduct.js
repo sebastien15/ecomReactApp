@@ -64,12 +64,12 @@ function AddProduct() {
         setProducts ([...produts, data])
     }
     return(
-        <div class="flex px-10 pt-20 pb-28">
-            <fieldset className="p-5 w-8/12 border border-gray-200">
+        <div class="flex flex-col sm:flex-row px-5 sm:px-10 pt-16 sm:pt-20 sm:pb-28">
+            <fieldset className="sm:p-5 sm:w-8/12 sm:border border-gray-200">
                 <form onSubmit= {onsubmit}>
-                    <legend className="px-4"> Add a game </legend>
-                    <div className="flex w-full mb-6">
-                        <div className="flex flex-col w-6/12 pr-2">
+                    <legend className="pb-3 sm:px-4 text-xl sm:text-base"> Add a game </legend>
+                    <div className="flex flex-col sm:flex-row w-full mb-6">
+                        <div className="flex flex-col w-full sm:w-6/12 sm:pr-2">
                             <label 
                                 className="text-gray-200">Name:
                             </label>
@@ -78,7 +78,7 @@ function AddProduct() {
                                 value={name} 
                                 onChange={(e)=> setName(e.target.value)}/>
                         </div>
-                        <div className="flex flex-col w-6/12 pl-2">
+                        <div className="flex flex-col w-full sm:w-6/12 sm:pl-2">
                             <label 
                                 className="text-gray-200">Company:
                             </label>
@@ -88,8 +88,8 @@ function AddProduct() {
                                 onChange={(e)=> seTCompany(e.target.value)}/>
                         </div>
                     </div>
-                    <div className="flex w-full mb-6">
-                        <div className="flex flex-col w-6/12 pr-2">
+                    <div className="flex flex-col sm:flex-row w-full mb-6">
+                        <div className="flex flex-col w-full sm:w-6/12 sm:pr-2">
                             <label 
                                 className="text-gray-200">Featured Image:</label>
                             <input name="fImage"
@@ -97,7 +97,7 @@ function AddProduct() {
                                 value={fImage} 
                                 onChange={(e)=> setfImage(e.target.value)}/>
                         </div>
-                        <div className="flex flex-col w-6/12 pl-2">
+                        <div className="flex flex-col w-full sm:w-6/12 sm:pl-2">
                             <label 
                                 className="text-gray-200">file:
                             </label>
@@ -125,7 +125,7 @@ function AddProduct() {
                                 className="p-1 text-gray-200 border border-gray-200 bg-transparent">
                             </textarea>
                     </div>
-                    <div className="flex mb-6 justify-between">
+                    <div className="flex flex-col sm:flex-row mb-6 justify-between">
                     <div className="flex">
                         <input type="checkbox" className="text-gray-200 bg-gray-400 mr-2 cursor-pointer"
                              name="featured"
@@ -134,11 +134,11 @@ function AddProduct() {
                              onChange={(e)=> setFeatured(e.currentTarget.checked)}/>
                         <span className="text-gray-200 -mt-1">Set as featured</span>
                     </div>
-                    <button className="p-1 w-3/12 text-gray-200 border border-gray-200 bg-transparent hover:bg-gray-700" type="submit">Save</button>
+                    <button className="p-1 w-full sm:w-3/12 text-gray-200 border border-gray-200 bg-transparent hover:bg-gray-700" type="submit">Save</button>
                 </div>                
                 </form>
             </fieldset>
-            <div className="w-4/12 p-8">
+            <div className="sm:w-4/12 p-8">
                 <header className="mb-6 text-lg -mt-4 font-semibold">Add a tag</header>
                 <div className="flex flex-wrap">
                     <h4 className="px-2 py-1 rounded-xl border border-gray-200 text-gray-200 text-sm font-thin mr-2">Actions</h4>

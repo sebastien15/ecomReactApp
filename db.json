@@ -36,26 +36,6 @@
       "description": "here is the description",
       "featured": true,
       "id": 4
-    },
-    {
-      "name": "Ndagijimana ",
-      "company": "sebastien",
-      "fImage": "fImage3",
-      "file": "gta.png",
-      "tags": "sports and kids",
-      "description": "here is another descroiptn",
-      "featured": true,
-      "id": 5
-    },
-    {
-      "name": "Ndagijimana ",
-      "company": "sebastien",
-      "fImage": "fImage3",
-      "file": "no file given",
-      "tags": "sports and kids",
-      "description": "fsafasdlfjsadlf",
-      "featured": true,
-      "id": 6
     }
   ],
   "tags": [
@@ -76,6 +56,45 @@
     {
       "email": "admin@example.com",
       "id": 2
+    },
+    {
+      "email": "Tapimillo.tm@gmail.com",
+      "id": 3
+    },
+    {
+      "email": [
+        "T",
+        "a",
+        "p",
+        "i",
+        "m",
+        "i",
+        "l",
+        "l",
+        "o",
+        ".",
+        "t",
+        "m",
+        "@",
+        "g",
+        "m",
+        "a",
+        "i",
+        "l",
+        ".",
+        "c",
+        "o",
+        "m",
+        {
+          "email": "Tapimillo.tm@gmail.com",
+          "id": 3
+        }
+      ],
+      "id": 4
+    },
+    {
+      "email": "ndase15ba@gmail.com",
+      "id": 5
     }
   ]
 }
