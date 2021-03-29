@@ -37,6 +37,9 @@ function Navigation({cart}) {
                         <li className="mr-2 cursor-pointer px-1 py-2 ">
                             <Link to="/addProduct">Add Product</Link>
                         </li>
+                        <li className="mr-2 cursor-pointer px-1 py-2 ">
+                            <Link to="/dashboard">Dashboard</Link>
+                        </li>
                     </ul> 
                 </div>
                 <div className="">

@@ -4,6 +4,7 @@ import Account from './pages/account';
 import Navigation from './Navigation';
 import Footer from './Footer';
 import AddProduct from './pages/addProduct';
+import EditProduct from './pages/editProduct';
 import SingleProduct from './pages/singleProduct';
 import Dashboard from './pages/dashboard';
 import Login from './pages/user/login';
@@ -58,6 +59,9 @@ function App (){
                     </Route>
                     <Route path="/dashboard" component="Dashboard">
                         <Dashboard products={products} deleteProduct={deleteProduct}/>
+                    </Route>
+                    <Route path="/edit" component="EditProduct">
+                        <EditProduct/>
                     </Route>
                 </Switch>
                 <Footer />

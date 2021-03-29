@@ -1,5 +1,5 @@
 import "../App.css";
-import {NavLink, BrowserRouter as Router} from "react-router-dom"
+import {Link} from "react-router-dom"
 import { useState } from 'react'
 
 function Footer() {
@@ -49,15 +49,13 @@ function Footer() {
             </div>
             <div className="sm:w-3/12 px-3 mb-5">
                 <h1 className="mb-3 text-xl">Top Links</h1>
-                <Router>
-                    <ul>
-                        <li><NavLink className="" to="/" exact> Home </NavLink></li>
-                        <li><NavLink className="" to="/about"> About </NavLink></li>
-                        <li><NavLink className="" to="/contact" > Contact us </NavLink></li>
-                        <li><NavLink className="" to="/forum" > Forum </NavLink></li>
-                        <li><NavLink className="" to="/community" > Community </NavLink></li>
-                    </ul>
-                </Router>
+                <ul>
+                    <li><Link to="/"> Home </Link></li>
+                    <li><Link to="/about"> About </Link></li>
+                    <li><Link to="/contact"> Contact us </Link></li>
+                    <li><Link to="/forum" > Forum </Link></li>
+                    <li><Link to="/community" > Community </Link></li>
+                </ul>
             </div>
             <div className="sm:w-4/12 px-3">
                 <p className="mb-2">Subscribe To Our NewsLatter</p>
